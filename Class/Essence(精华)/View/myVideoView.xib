@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="myVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="251"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TB1-wP-id7">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="251"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-Mf-149">
+                    <rect key="frame" x="0.0" y="235" width="68" height="16"/>
+                    <color key="backgroundColor" red="0.58577724358974359" green="0.58577724358974359" blue="0.58577724358974359" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="vyJ-rc-SBR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEx-cS-hYG">
+                    <rect key="frame" x="306" y="235" width="37" height="16"/>
+                    <color key="backgroundColor" red="0.58577724360000005" green="0.58577724360000005" blue="0.58577724360000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="DrU-El-NFg"/>
+                        <constraint firstAttribute="width" constant="37" id="Uj5-tg-csg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfm-md-nMS">
+                    <rect key="frame" x="136" y="90" width="71" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="B54-hz-yEM"/>
+                        <constraint firstAttribute="height" constant="71" id="xvW-b5-kKl"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="video-play"/>
+                    <connections>
+                        <action selector="playBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="tnF-eb-Q0a"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="H87-Rd-GJ0">
+                    <rect key="frame" x="0.0" y="15" width="343" height="25"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CCd-Mf-149" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0gl-LD-Oc2"/>
+                <constraint firstAttribute="bottom" secondItem="TB1-wP-id7" secondAttribute="bottom" id="2by-Z6-QNB"/>
+                <constraint firstItem="CCd-Mf-149" firstAttribute="bottom" secondItem="TB1-wP-id7" secondAttribute="bottom" id="A5Q-d0-Rmk"/>
+                <constraint firstItem="TB1-wP-id7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SW9-ny-EBa"/>
+                <constraint firstItem="CCd-Mf-149" firstAttribute="leading" secondItem="TB1-wP-id7" secondAttribute="leading" id="SuB-pc-6ha"/>
+                <constraint firstItem="Kfm-md-nMS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Tnd-EE-HcS"/>
+                <constraint firstAttribute="bottom" secondItem="LEx-cS-hYG" secondAttribute="bottom" id="XAd-7F-ITC"/>
+                <constraint firstItem="TB1-wP-id7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="baz-JY-n4r"/>
+                <constraint firstItem="Kfm-md-nMS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gBX-Zx-lvL"/>
+                <constraint firstAttribute="trailing" secondItem="TB1-wP-id7" secondAttribute="trailing" id="iTp-5G-8CD"/>
+                <constraint firstItem="LEx-cS-hYG" firstAttribute="bottom" secondItem="TB1-wP-id7" secondAttribute="bottom" id="imE-2d-pz8"/>
+                <constraint firstAttribute="trailing" secondItem="LEx-cS-hYG" secondAttribute="trailing" id="rUp-4D-9ek"/>
+                <constraint firstAttribute="bottom" secondItem="CCd-Mf-149" secondAttribute="bottom" id="whT-FU-hbj"/>
+                <constraint firstItem="LEx-cS-hYG" firstAttribute="trailing" secondItem="TB1-wP-id7" secondAttribute="trailing" id="x4Z-L6-pHQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="playBtn" destination="Kfm-md-nMS" id="fyV-Ql-ALc"/>
+                <outlet property="playCount" destination="CCd-Mf-149" id="yLO-zj-53g"/>
+                <outlet property="playTime" destination="LEx-cS-hYG" id="U0W-ab-q04"/>
+                <outlet property="videoImage" destination="TB1-wP-id7" id="4hT-wj-X5o"/>
+            </connections>
+            <point key="canvasLocation" x="449.5" y="221.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>
