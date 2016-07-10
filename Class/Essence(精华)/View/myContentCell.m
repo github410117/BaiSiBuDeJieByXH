@@ -16,6 +16,7 @@
 #import "UIButton+WebCache.h"
 #import "UIImageView+AFNetworking.h"
 #import "XHCommentViewController.h"
+#import "XHCommentCell.h"
 
 
 @interface myContentCell ()
@@ -152,6 +153,7 @@
 
 //设置cell之间的距离
 -(void)setFrame:(CGRect)frame {
+   
     frame.size.height -= 10;
     frame.origin.y += 10;
     [super setFrame:frame];

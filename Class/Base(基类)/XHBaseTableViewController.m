@@ -174,6 +174,7 @@ static NSString *const identifier = @"myCell";
 - (void)showCommentView:(myContentCell *)cell {
     XHCommentViewController *comment = [[XHCommentViewController alloc] init];
     comment.talkModel = _dataArray[cell.tag];
+    comment.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:comment animated:YES];
 }
 

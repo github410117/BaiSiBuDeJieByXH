@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XHUser3Model.h"
+#import "XHUserModel.h"
 
 @class XHUserModel;
 @interface XHTopCommentModel : NSObject

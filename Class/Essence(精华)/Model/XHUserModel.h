@@ -40,4 +40,16 @@
 /** 内容的宽度 */
 @property (nonatomic ,assign) NSInteger width;
 
+/**
+ *  头像Url
+ */
+@property (nonatomic,strong) NSString *profile_image;
+
+/**
+ *  名字
+ */
+@property (nonatomic,strong) NSString *username;
+
+
+
 @end
