@@ -16,7 +16,6 @@
 static NSString *const identifier = @"myCell";
 
 @interface XHBaseTableViewController ()
-
 //请求回来的数据数组
 @property (nonatomic, copy) NSMutableArray *dataArray;
 
@@ -69,6 +68,7 @@ static NSString *const identifier = @"myCell";
     
     //取消自动布局，自己手动
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     
 }
 
@@ -165,10 +165,22 @@ static NSString *const identifier = @"myCell";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.tag = indexPath.row;
     [cell.showComment addTarget:self action:@selector(showCommentView:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.rightAlertBtn addTarget:self action:@selector(rightAlertClick) forControlEvents:UIControlEventTouchUpInside];
     cell.talkModel = self.dataArray[indexPath.row];
     return cell;
 }
 
+//更多和举报点击事件
+- (void)rightAlertClick {
+    UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *collect = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *report = [UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertCtr addAction:collect];
+    [alertCtr addAction:report];
+    [alertCtr addAction:cancel];
+    [self presentViewController:alertCtr animated:YES completion:nil];
+}
 
 //评论点击事件
 - (void)showCommentView:(myContentCell *)cell {
@@ -192,6 +204,9 @@ static NSString *const identifier = @"myCell";
     commentView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:commentView animated:YES];
 }
+
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

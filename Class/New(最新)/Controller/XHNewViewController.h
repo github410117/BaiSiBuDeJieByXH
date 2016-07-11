@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHScrollBarBaseViewController.h"
 
-@interface XHNewViewController : UIViewController
+@interface XHNewViewController : XHScrollBarBaseViewController
 
 @end

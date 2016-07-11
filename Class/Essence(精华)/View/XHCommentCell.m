@@ -51,4 +51,11 @@
 }
 
 
+//设置cell之间的距离
+- (void)setFrame:(CGRect)frame {
+    frame.size.height -= 1;
+    frame.origin.y += 1;
+    [super setFrame:frame];
+}
+
 @end

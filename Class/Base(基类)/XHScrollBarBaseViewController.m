@@ -270,35 +270,6 @@ static NSString *const identifier = @"cell";
 }
 
  
-/**
- *  滑动中调用的方法(在滚动中变换btn的文字和颜色)
- */
-/*
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    //上一个btn
-    NSInteger last = scrollView.contentOffset.x / Main_Screen_Width;
-    //下一个btn
-    NSInteger next = last + 1;
-    
-    UIButton *lastBtn = _titleBtns[last];
-    UIButton *nextBtn = nil;
-    
-    //防止数组越界，如果点到最后一个，不判断会越界
-    if (next < self.titleBtns.count) {
-        nextBtn = _titleBtns[next];
-    }
-    
-    //设置文字大小缩放
-    lastBtn.transform = CGAffineTransformMakeScale(1.2, 1.2);
-    nextBtn.transform = CGAffineTransformMakeScale(1, 1);
-    
-    //改变按钮颜色
-    [lastBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [nextBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-}
-
-*/
 
 
 /**

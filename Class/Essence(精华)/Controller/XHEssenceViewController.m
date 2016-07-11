@@ -9,6 +9,7 @@
 #import "XHEssenceViewController.h"
 #import "XHBaseTableViewController.h"
 #import "XHScrollBarBaseViewController.h"
+#import "XHCrossViewController.h"
 #define scrollBar @"scrollBar"
 #define allUrl @"AllURL"
 
@@ -51,7 +52,7 @@
  */
 - (void)setNavigation {
     //设置logo
-    UIImageView *titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    UIImageView *titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 200)];
     titleImage.image = GetImage(@"MainTitle");
     titleImage.contentMode = UIViewContentModeCenter;
     [self.navigationItem setTitleView:titleImage];
@@ -85,7 +86,9 @@
 }
 
 - (void)crossClick {
-    NSLog(@"点击了穿越");
+    XHCrossViewController *cross = [[XHCrossViewController alloc] init];
+    cross.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cross animated:YES];
 }
 
 

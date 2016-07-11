@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHShowPicViewController">
@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-ab-ubW">
-                    <rect key="frame" x="20" y="631" width="41" height="26"/>
+                    <rect key="frame" x="20" y="621" width="41" height="26"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="qyO-hl-lHw"/>
@@ -45,44 +45,14 @@
                         <action selector="save:" destination="-1" eventType="touchUpInside" id="8wV-75-8ZB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-Rs-K5I">
-                    <rect key="frame" x="259" y="631" width="41" height="26"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="26" id="I0u-kq-2wd"/>
-                        <constraint firstAttribute="width" constant="41" id="XQF-eN-SBw"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="转发"/>
-                    <connections>
-                        <action selector="forward:" destination="-1" eventType="touchUpInside" id="Zf8-hL-vie"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-19-cCe">
-                    <rect key="frame" x="314" y="631" width="41" height="26"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="26" id="P8r-xo-wOC"/>
-                        <constraint firstAttribute="width" constant="41" id="f5R-q4-hzz"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="评论"/>
-                    <connections>
-                        <action selector="comments:" destination="-1" eventType="touchUpInside" id="maZ-o6-ZNG"/>
-                    </connections>
-                </button>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="n6f-3D-bqr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4hp-Jb-WaO"/>
                 <constraint firstAttribute="bottom" secondItem="n6f-3D-bqr" secondAttribute="bottom" id="5Yw-UB-2ek"/>
-                <constraint firstAttribute="bottom" secondItem="cy3-Rs-K5I" secondAttribute="bottom" constant="10" id="8Pr-LP-uOB"/>
-                <constraint firstAttribute="bottom" secondItem="mHf-19-cCe" secondAttribute="bottom" constant="10" id="EVq-R2-qmR"/>
                 <constraint firstItem="LLe-gK-6Rs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="KF5-0P-UNJ"/>
-                <constraint firstAttribute="bottom" secondItem="e2U-ab-ubW" secondAttribute="bottom" constant="10" id="Q2E-kF-iyY"/>
+                <constraint firstAttribute="bottom" secondItem="e2U-ab-ubW" secondAttribute="bottom" constant="20" id="Q2E-kF-iyY"/>
                 <constraint firstAttribute="trailing" secondItem="n6f-3D-bqr" secondAttribute="trailing" id="TEv-9s-bpb"/>
-                <constraint firstItem="mHf-19-cCe" firstAttribute="leading" secondItem="cy3-Rs-K5I" secondAttribute="trailing" constant="14" id="Zu0-Am-cyQ"/>
-                <constraint firstAttribute="trailing" secondItem="mHf-19-cCe" secondAttribute="trailing" constant="20" id="dMR-fN-1XU"/>
                 <constraint firstItem="n6f-3D-bqr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hCm-ua-n6I"/>
                 <constraint firstItem="e2U-ab-ubW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="oKA-nj-f7R"/>
                 <constraint firstItem="LLe-gK-6Rs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="we3-NW-Wgo"/>

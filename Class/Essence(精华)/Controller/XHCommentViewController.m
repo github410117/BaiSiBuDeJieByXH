@@ -46,6 +46,9 @@ static NSString *const commentLastUrl = @"&device=ios%20device&from=ios&hot=1&jb
     self.myTableView.dataSource = self;
     //估算高度,就不用每个cell都设置高度了,给个大概值
     self.myTableView.estimatedRowHeight = 44;
+    //取消tableview的分栏线
+    self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 
 
 }
@@ -133,10 +136,7 @@ static NSString *const commentLastUrl = @"&device=ios%20device&from=ios&hot=1&jb
     
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 50;
-//}
+
 
 
 

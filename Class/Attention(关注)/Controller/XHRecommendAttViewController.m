@@ -1,42 +1,32 @@
 //
-//  XHAttentionViewController.m
+//  XHRecommendAttViewController.m
 //  BaiSiBuDeJieByXH
 //
-//  Created by xh on 16/7/6.
+//  Created by xh on 16/7/11.
 //  Copyright © 2016年 xh. All rights reserved.
 //
 
-#import "XHAttentionViewController.h"
+#import "XHRecommendAttViewController.h"
 
-@interface XHAttentionViewController ()
+@interface XHRecommendAttViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+//左侧分栏
+@property (weak, nonatomic) IBOutlet UITableView *leftTab;
+
+//左侧分栏数据
+@property (nonatomic, copy) NSArray *leftTabArray;
+
+//右侧分栏
+@property (weak, nonatomic) IBOutlet UITableView *rightTab;
 
 @end
 
-@implementation XHAttentionViewController
+@implementation XHRecommendAttViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigation];
-    
     // Do any additional setup after loading the view from its nib.
 }
-
-- (void)setNavigation {
-    self.navigationItem.title = @"关注";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:normalImage(GetImage(@"friendsRecommentIcon")) style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnClick)];
-}
-
-- (void)leftBtnClick {
-    NSLog(@"点了左边的按钮");
-}
-
-
-
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -11,7 +11,6 @@
 #import "XHUserModel.h"
 #import "XHUser3Model.h"
 #import "PictureView.h"
-#import "myVoiceView.h"
 #import "myVideoView.h"
 #import "UIButton+WebCache.h"
 #import "UIImageView+AFNetworking.h"
@@ -32,10 +31,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *comment;
 @property (weak, nonatomic) IBOutlet UIView *hotCommentView;
 
-@property (nonatomic, strong) myVoiceView *myVoiceView;
 @property (nonatomic, strong) PictureView *pictureView;
 
 @property (nonatomic, strong) myVideoView *myVideoView;
+- (IBAction)rightAlertBtn:(UIButton *)sender;
 
 
 @end
@@ -81,28 +80,18 @@
     if ([talkModel.type isEqualToString:@"image"] || [talkModel.type isEqualToString:@"gif"]) {
         //如果类型为图片，将自己视频和音频控件隐藏，图片控件显示
         self.myVideoView.hidden = YES;
-        self.myVoiceView.hidden = YES;
         self.pictureView.hidden = NO;
         self.pictureView.talkModel = talkModel;
         self.pictureView.frame = talkModel.pictureF;
     }else if ([talkModel.type isEqualToString:@"video"]) {
         //如果类型是视频，将图片和声音控件隐藏，视频控件显示
         self.pictureView.hidden = YES;
-        self.myVoiceView.hidden = YES;
         self.myVideoView.hidden = NO;
         self.myVideoView.talkModel = talkModel;
         self.myVideoView.frame = talkModel.videoF;
-    }else if ([talkModel.type isEqualToString:@"audio"]) {
-        //如果类型是音频，将图片和视频控件隐藏，音频控件显示
-        self.pictureView.hidden = YES;
-        self.myVideoView.hidden = YES;
-        self.myVoiceView.hidden = NO;
-        self.myVoiceView.talkModel = talkModel;
-        self.myVoiceView.frame = talkModel.soundF;
     }else {
         //段子类型,将所有控件都隐藏(音频、视频、图片)
         self.pictureView.hidden = YES;
-        self.myVoiceView.hidden = YES;
         self.myVideoView.hidden = YES;
     }
     
@@ -118,37 +107,6 @@
     }
 //    talkModel.top_comment ? self.hotCommentView.hidden = NO : self.hotCommentView.hidden = YES;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //设置cell之间的距离
@@ -185,14 +143,13 @@
 
 
 
-- (myVoiceView *)myVoiceView
-{
-    if (!_myVoiceView) {
-        _myVoiceView = [myVoiceView voiceView];
-        [self.contentView addSubview:_myVoiceView];
-    }
-    return _myVoiceView;
+- (IBAction)rightAlertBtn:(UIButton *)sender {
+    
 }
+
+
+
+
 
 
 

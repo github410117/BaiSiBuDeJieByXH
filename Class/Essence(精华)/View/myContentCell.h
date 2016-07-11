@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class XHTalkModel;
+
+
 @interface myContentCell : UITableViewCell
 /**
  *  所有数据
  */
 @property (nonatomic, strong) XHTalkModel *talkModel;
 @property (weak, nonatomic) IBOutlet UIButton *showComment;
+@property (weak, nonatomic) IBOutlet UIButton *rightAlertBtn;
+
 + (instancetype)myComtentCell;
 @end

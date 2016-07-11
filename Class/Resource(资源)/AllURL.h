@@ -63,5 +63,20 @@
 //声音
 #define XHNewSoundURL @"http://s.budejie.com/topic/list/zuixin/31/bs0315-iphone-4.2/0-20.json"
 
+//------穿越
+//全部
+#define XHCrossAllURL @"http://d.api.budejie.com/topic/list/chuanyue/1/bs0315-iphone-4.2/0-20.json"
+
+//视频
+#define XHCrossVideoURL @"http://d.api.budejie.com/topic/list/chuanyue/41/bs0315-iphone-4.2/0-20.json"
+
+//图片
+#define XHCrossPictureURL @"http://d.api.budejie.com/topic/list/chuanyue/10/bs0315-iphone-4.2/0-20.json"
+
+//段子
+#define XHCrossTextURL @"http://d.api.budejie.com/topic/list/chuanyue/29/bs0315-iphone-4.2/0-20.json"
+
+//声音
+#define XHCrossSoundURL @"http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json"
 
 #endif /* AllURL_h */

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHAttentionViewController">
@@ -13,7 +15,92 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snip20160604_1" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-X9-N02">
+                    <rect key="frame" x="190" y="190" width="220" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="VRO-eC-dLj"/>
+                        <constraint firstAttribute="width" constant="220" id="hA4-iR-kmE"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWL-dA-iry">
+                    <rect key="frame" x="0.0" y="474" width="600" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-TY-17J">
+                            <rect key="frame" x="347" y="0.0" width="200" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="lr2-wn-VQG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="注册" backgroundImage="friendsTrend_login">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isc-TY-s1s">
+                            <rect key="frame" x="53" y="0.0" width="200" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oIj-Rj-6qz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="登录">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="isc-TY-s1s" firstAttribute="width" secondItem="GWL-dA-iry" secondAttribute="width" multiplier="1:3" id="240-Nu-gCa"/>
+                        <constraint firstItem="isc-TY-s1s" firstAttribute="leading" secondItem="GWL-dA-iry" secondAttribute="leading" constant="95" id="2ah-3U-gF9"/>
+                        <constraint firstItem="I0Q-TY-17J" firstAttribute="leading" secondItem="isc-TY-s1s" secondAttribute="trailing" constant="52" id="4gh-BD-ocl"/>
+                        <constraint firstItem="I0Q-TY-17J" firstAttribute="width" secondItem="GWL-dA-iry" secondAttribute="width" multiplier="1:3" id="759-Xo-0YN"/>
+                        <constraint firstItem="isc-TY-s1s" firstAttribute="centerY" secondItem="GWL-dA-iry" secondAttribute="centerY" id="7Z4-lc-N8j"/>
+                        <constraint firstItem="I0Q-TY-17J" firstAttribute="centerY" secondItem="GWL-dA-iry" secondAttribute="centerY" id="Rw0-pl-UOC"/>
+                        <constraint firstItem="isc-TY-s1s" firstAttribute="leading" secondItem="GWL-dA-iry" secondAttribute="leading" constant="53" id="S63-ta-GQ4"/>
+                        <constraint firstAttribute="trailing" secondItem="I0Q-TY-17J" secondAttribute="trailing" constant="53" id="YBN-3d-xzl"/>
+                        <constraint firstAttribute="height" constant="40" id="qxS-aL-3gI"/>
+                        <constraint firstItem="isc-TY-s1s" firstAttribute="leading" secondItem="GWL-dA-iry" secondAttribute="leading" constant="95" id="t3X-3U-m0y"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2ah-3U-gF9"/>
+                            <exclude reference="t3X-3U-m0y"/>
+                            <exclude reference="4gh-BD-ocl"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快快登录吧，关注百思最in牛人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7N-rl-uzq">
+                    <rect key="frame" x="162" y="105" width="276" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="276" id="CbV-nv-SK8"/>
+                        <constraint firstAttribute="height" constant="21" id="OdU-bM-M26"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.42352941179999998" green="0.42745098040000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GWL-dA-iry" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5sJ-Rf-0M0"/>
+                <constraint firstItem="n7N-rl-uzq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CDj-gq-r2a"/>
+                <constraint firstItem="GWL-dA-iry" firstAttribute="top" secondItem="Atz-X9-N02" secondAttribute="bottom" constant="64" id="IOa-Fa-jsZ"/>
+                <constraint firstItem="Atz-X9-N02" firstAttribute="top" secondItem="n7N-rl-uzq" secondAttribute="bottom" constant="64" id="JKQ-wq-WAM"/>
+                <constraint firstItem="Atz-X9-N02" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TFs-Tj-eTz"/>
+                <constraint firstItem="GWL-dA-iry" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mgW-e6-K3d"/>
+                <constraint firstAttribute="trailing" secondItem="GWL-dA-iry" secondAttribute="trailing" id="qqg-Lr-RRr"/>
+                <constraint firstItem="Atz-X9-N02" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ywa-pm-zSJ"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Snip20160604_1" width="456" height="452"/>
+        <image name="friendsTrend_login" width="243" height="48"/>
+    </resources>
 </document>
