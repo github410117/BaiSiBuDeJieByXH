@@ -15,4 +15,12 @@
     return @{@"ID" : @"id"};
 }
 
+- (NSMutableArray *)users
+{
+    if (_users == nil) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
+
 @end

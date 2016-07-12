@@ -9,6 +9,11 @@
 #import "XHMeViewController.h"
 
 @interface XHMeViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *XHTableView;
+
+@end
+
+@interface XHMeViewController ()
 
 @end
 
@@ -16,8 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:_XHTableView];
     // Do any additional setup after loading the view from its nib.
 }
+
+
+
+
+- (void)setTableView {
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

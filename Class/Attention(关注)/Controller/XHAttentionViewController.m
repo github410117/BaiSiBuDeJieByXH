@@ -7,6 +7,7 @@
 //
 
 #import "XHAttentionViewController.h"
+#import "XHRecommendAttViewController.h"
 
 @interface XHAttentionViewController ()
 
@@ -24,10 +25,15 @@
 - (void)setNavigation {
     self.navigationItem.title = @"关注";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:normalImage(GetImage(@"friendsRecommentIcon")) style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnClick)];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:back];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
 
 - (void)leftBtnClick {
-    NSLog(@"点了左边的按钮");
+    XHRecommendAttViewController *recommendAtt = [[XHRecommendAttViewController alloc] init];
+    recommendAtt.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:recommendAtt animated:YES];
 }
 
 

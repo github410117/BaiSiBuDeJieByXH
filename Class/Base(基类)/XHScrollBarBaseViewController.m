@@ -35,6 +35,7 @@ static NSString *const identifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //改变默认返回按钮
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:back];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];

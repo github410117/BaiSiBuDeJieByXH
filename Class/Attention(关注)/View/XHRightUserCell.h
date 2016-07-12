@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class XHRightUserModel;
 @interface XHRightUserCell : UITableViewCell
+
+@property (nonatomic, strong) XHRightUserModel *rightUsreModel;
 
 @end

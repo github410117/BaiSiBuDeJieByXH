@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class XHLeftTabModel;
 @interface XHLeftTabCell : UITableViewCell
+
+@property (nonatomic, strong) XHLeftTabModel *leftTabModel;
 
 @end
